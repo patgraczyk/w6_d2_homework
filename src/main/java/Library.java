@@ -35,4 +35,9 @@ public class Library {
             this.stock.add(book);
             }
         }
+        
+    public void removeBook(Book book) {
+        this.stock.remove(book);
+        capacity += 1;
+    }
 }
