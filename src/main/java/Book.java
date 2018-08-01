@@ -3,8 +3,9 @@ public class Book {
 
     private BookGenre description;
 
-    public Book(){
+    public Book(String description){
 
+        this.description = description;
     }
 //
 }

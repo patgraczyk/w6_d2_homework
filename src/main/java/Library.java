@@ -5,11 +5,16 @@ public class Library {
     private ArrayList<Book> stock;
     private int capacity;
 
-    public Library() {
-    this.stock = new ArrayList<>();
+    public Library (int capacity) {
+    this.stock = new ArrayList<Book>();
     this.capacity = capacity;
     }
+//close constructor
 
+    /**
+     *
+     * @return
+     */
 
     public int bookCount() {
         return this.stock.size();
@@ -20,7 +25,9 @@ public class Library {
     }
 
     public void removeBook(Book book) {
-        this.stock.remove(book);
+        this.stock.remove(0);
+        capacity += 1;
+// need to say what number of book u r removing
     }
 ////
     public boolean checkStock() {
@@ -29,15 +36,14 @@ public class Library {
         } else { return true;
         }
     }
-//
     public void add(Book book){
         if (this.checkStock() == false) {
             this.stock.add(book);
             }
         }
-        
-    public void removeBook(Book book) {
-        this.stock.remove(book);
-        capacity += 1;
-    }
+
+//    public void removeBook(Book book) {
+//        this.stock.remove(book);
+//
+//    }
 }
